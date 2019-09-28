@@ -1,12 +1,14 @@
 module.exports.groupAdultsByAgeRange  = function(transform){
 
+    let CheckLengthOfArray
 
     if(transform.length === 0) return {}
     else 
         {
-             let transform = transform.filter((transform) => {
-                 return transform.age <18
+            CheckLengthOfArray = transform.filter((transform) => {
+                 return transform.age > 18
              })
+        if(CheckLengthOfArray.length === 0) return {} 
     
         const outPeople = {
             '20 and younger' :  [],
